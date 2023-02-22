@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.section {
+  background-color: #BAD7E9;
+  min-height: 100vh;
+}
+.container {
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #BAD7E9;
+  min-height: 100vh;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.form {
+  padding: 20px;
+  background-color: #95BDFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .form {
+    flex-direction: column;
+    align-items: initial;
+  }
+}
+.form input[type = "text"] {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.form input[type = "text"]:focus {
+  outline: none;
+}
+.form input[type = "submit"] {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #00425A;
+  color: white;
+  transition: 0.3s;
+}
+.form input[type = "submit"]:hover {
+  background-color: #20262E;
+}
+.task-container {
+  padding: 10px;
+  background-color: #95BDFF;
+  margin-top: 20px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.task-container h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #20262E;
+  text-shadow: 1px 1px 1px #FFF;
+}
+.task {
+  background-color: #0F6292;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+}
+.task::before {
+  /* content: 'Date: 'attr(data-id); */
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #545454;
+  color: white;
+  font-size: 13px;
+  border-radius: 3px;
+  padding: 2px;
+}
+.task > span:first-child {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px #140c0c;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.task .btns span:first-of-type {
+  cursor: pointer;
+  background-color: #3dd5f3;
+  border-radius: 6px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+.task .btns span:first-child:hover {
+  background-color: #77d7ea;
+}
+.task .btns span:last-child {
+  cursor: pointer;
+  background-color: #bb2d3b;
+  color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+.task .btns span:last-child:hover {
+  background-color: #801d27;
+}
+.finished {
+  background-color: #053652;
+}
