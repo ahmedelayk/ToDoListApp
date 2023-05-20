@@ -1,121 +1,120 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 .section {
-  background-color: #BAD7E9;
+  background-color: #E8F0F5;
   min-height: 100vh;
 }
+
 .container {
   padding: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #BAD7E9;
-  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
 }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+
 .form {
-  padding: 20px;
-  background-color: #95BDFF;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 10px;
-  border-radius: 10px;
-  margin: auto;
+  margin-bottom: 20px;
 }
-@media (max-width: 767px) {
-  .form {
-    flex-direction: column;
-    align-items: initial;
-  }
-}
-.form input[type = "text"] {
+
+.form input[type="text"] {
   flex: 1;
   border: none;
   padding: 10px;
   border-radius: 6px;
   font-size: 1rem;
+  border: 1px solid #00968735;
+  transition: .3s;
 }
-.form input[type = "text"]:focus {
+.form input[type="text"]:focus {
   outline: none;
+  box-shadow: inset 0px 0px 4px 0px #009688;
 }
-.form input[type = "submit"] {
+.form input[type="submit"] {
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  background-color: #00425A;
-  color: white;
+  background-color: #009688;
+  color: #fff;
   transition: 0.3s;
 }
-.form input[type = "submit"]:hover {
-  background-color: #20262E;
+
+.form input[type="submit"]:hover {
+  background-color: #00796B;
 }
+
 .task-container {
-  padding: 10px;
-  background-color: #95BDFF;
   margin-top: 20px;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  margin-left: auto;
-  margin-right: auto;
 }
-.task-container h3 {
+
+.task-container > h3 {
   text-align: center;
-  font-weight: bold;
-  color: #20262E;
-  text-shadow: 1px 1px 1px #FFF;
 }
+
 .task {
-  background-color: #0F6292;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #FFFFFF;
   padding: 10px;
   border-radius: 6px;
-  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.task::before {
-  /* content: 'Date: 'attr(data-id); */
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  background-color: #545454;
-  color: white;
-  font-size: 13px;
-  border-radius: 3px;
-  padding: 2px;
-}
-.task > span:first-child {
-  font-size: 1rem;
+
+.task input[type="button"] {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
   font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px 3px #140c0c;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+.task input[type="button"]:hover {
+  opacity: 0.7;
+}
+
+.task .task-name {
+  flex: 1;
+}
+
+.task .btn-finish {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+}
+
+.task .btn-delete {
+  background-color: #FF5722;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column;
+  }
+  
+  .form input[type="text"] {
+    width: 100%;
+  }
+  
+  .form input[type="submit"] {
+    width: 100%;
+  }
+}
+
 .btns {
   display: flex;
   justify-content: space-between;
@@ -124,13 +123,14 @@ body {
 }
 .task .btns span:first-of-type {
   cursor: pointer;
-  background-color: #3dd5f3;
+  background-color
+: #3dd5f3;
   border-radius: 6px;
   padding: 5px 10px;
   transition: 0.3s;
 }
 .task .btns span:first-child:hover {
-  background-color: #77d7ea;
+  background-color: #02a0c0;
 }
 .task .btns span:last-child {
   cursor: pointer;
@@ -144,5 +144,6 @@ body {
   background-color: #801d27;
 }
 .finished {
-  background-color: #053652;
+  background-color: #bd93fb ;
+  transition: .3s;
 }
